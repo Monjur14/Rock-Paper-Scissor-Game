@@ -1,0 +1,146 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+.container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+.heading_text{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.btn_container{
+    display: flex;
+    gap: 2rem;
+}
+.btn_emoji{
+    background-color: #000;
+    font-size: 3.8rem;
+    padding: 1.8rem;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+.btn_emoji:hover{
+    background-color: #ffffff25;
+}
+
+.display_result{
+    font-size: 3rem;
+}
+.show_moves{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.emoji{
+    font-size: 5rem;
+}
+
+.display_result{
+    margin: 1rem 0rem;
+}
+.show_moves_first{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.show_moves_second{
+    display: flex;
+    align-items: center;
+}
+.final_result{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0rem;
+}
+.reset_btn{
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    font-weight: 500;
+}
+.reset_btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+@media (0px < width <=400px) {
+    .heading_text{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        padding: 0 0.5rem;
+    }
+    .btn_emoji{
+        background-color: #000;
+        font-size: 2.5rem;
+        padding: 1.1rem;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        cursor: pointer;
+    }
+    .btn_container{
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+@media (400px < width <= 760px) {
+    .heading_text{
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        padding: 0 0.5rem;
+        margin-top: 0.3rem;
+    }
+    .btn_emoji{
+        background-color: #000;
+        font-size: 2.6rem;
+        padding: 1.6rem;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        cursor: pointer;
+    }
+    .btn_container{
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+@media (760px < width <= 1024px) {
+    .heading_text{
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+        padding: 0 0.5rem;
+        margin-top: 1rem;
+    }
+    .btn_emoji{
+        background-color: #000;
+        font-size: 3rem;
+        padding: 2rem;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        cursor: pointer;
+    }
+    .btn_container{
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}

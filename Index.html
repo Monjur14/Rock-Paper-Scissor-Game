@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading_text">Rock, Paper, Scissor</h1>
+
+
+
+    <div class="btn_container">
+        <button onclick="
+        myMoveIs('Rock');
+    computerMovex();
+    checkGame('Rock');
+    updateScore();
+    showResult();   
+    " class="btn_emoji">✊</button>
+
+
+
+    <button onclick="
+    myMoveIs('Paper');
+    computerMovex()
+    checkGame('Paper')
+    updateScore()
+    showResult()
+    " class="btn_emoji">🖐️</button>
+
+
+
+
+    <button onclick="
+    myMoveIs('Scissor');
+    computerMovex()
+    checkGame('Scissor')
+    updateScore()
+    showResult()
+    " class="btn_emoji">✌️</button>
+    </div>
+    <h1 class="display_result">Play Now</h1>
+
+    <div class="show_moves">
+        <div class="show_moves_first"><p class="p_flex">You Chose</p><p class="show_my_move emoji">❌</p></div>
+        <div class="show_comp_move_second"><p class="show_comp_move emoji">❌</p><p class="p_flex">Computer Chose</p></div>
+    </div>
+    <!-- <pre id="js-show-score">
+win : 0
+Lose : 0
+Tie : 0</pre> -->
+<div class="final_result" id="js-show-score">
+    <p class="win_score">Win: 0</p><p class="lose_score">Lose: 0</p><p class="tie_score">Tie: 0</p>
+</div>
+
+
+    <button onclick="
+    score.Win = 0;
+    score.Lose = 0;
+    score.Tie = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    showResult()
+    " class="reset_btn">Reset Score</button>
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
