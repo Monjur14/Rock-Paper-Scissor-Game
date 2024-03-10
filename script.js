@@ -76,7 +76,7 @@ let computerMove = '';
             updateScoreElement();
            document.querySelector('.display_result').innerText = result
            let popupContainer = document.querySelector(".popup_container")
-        if(score.Win === 15){
+        if(score.Win === 5){
             popupContainer.classList.remove("none")
             popupContainer.classList.add("block")
             popupContainer.innerHTML = ''
@@ -93,7 +93,7 @@ let computerMove = '';
             ">Play Again</button>
             </div>
             `)
-        }else if(score.Lose === 15){
+        }else if(score.Lose === 5){
             popupContainer.classList.remove("none")
             popupContainer.classList.add("block")
             popupContainer.innerHTML = ''
@@ -110,7 +110,7 @@ let computerMove = '';
             ">Play Again</button>
             </div>
             `)
-        } else if(score.Tie === 15){
+        } else if(score.Tie === 5){
             popupContainer.classList.remove("none")
             popupContainer.classList.add("block")
             popupContainer.innerHTML = ''
