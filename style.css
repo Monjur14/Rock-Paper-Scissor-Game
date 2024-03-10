@@ -11,6 +11,7 @@ body{
 }
 .container{
     max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -39,6 +40,7 @@ body{
 
 .display_result{
     font-size: 3rem;
+    margin: 1rem 0rem;
 }
 .show_moves{
     display: flex;
@@ -47,10 +49,6 @@ body{
 }
 .emoji{
     font-size: 5rem;
-}
-
-.display_result{
-    margin: 1rem 0rem;
 }
 .show_moves_first{
     display: flex;
@@ -82,11 +80,62 @@ body{
     background-color: #fff;
     color: #000;
 }
+.show_comp_move_second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup_container{
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(7px);
+}
+.popup{
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 2.5rem 0rem;
+    width: 600px;
+    border-radius: 10px;
+}
+.popup h1{
+    font-size: 2.8rem;
+    margin: 1rem 0rem;
+}
+.popup img{
+    width: 220px;
+}
+.popup button{
+    padding: 0.7rem 2rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #000;
+    font-weight: 700;
+    font-size: 1.01rem;
+    margin-top: 1rem;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
 @media (0px < width <=400px) {
     .heading_text{
         font-size: 2rem;
         margin-bottom: 3rem;
         padding: 0 0.5rem;
+        margin-top: 1rem;
     }
     .btn_emoji{
         background-color: #000;
@@ -101,13 +150,23 @@ body{
         gap: 1.5rem;
         margin-bottom: 2rem;
     }
+    .popup{
+        width: 95%;
+    }
+    .popup img{
+        width: 180px;
+    }
+    .popup h1{
+        font-size: 2.1rem;
+        margin: 1rem 0rem;
+    }
 }
 @media (400px < width <= 760px) {
     .heading_text{
         font-size: 2.4rem;
         margin-bottom: 3rem;
         padding: 0 0.5rem;
-        margin-top: 0.3rem;
+        margin-top: 1rem;
     }
     .btn_emoji{
         background-color: #000;
@@ -121,6 +180,16 @@ body{
         display: flex;
         gap: 1.5rem;
         margin-bottom: 2rem;
+    }
+    .popup{
+        width: 90%;
+    }
+    .popup img{
+        width: 180px;
+    }
+    .popup h1{
+        font-size: 2.1rem;
+        margin: 1rem 0rem;
     }
 }
 @media (760px < width <= 1024px) {
@@ -142,5 +211,52 @@ body{
         display: flex;
         gap: 1.5rem;
         margin-bottom: 2rem;
+    }
+}
+@media (1500px < width < 4000px) {
+    .container{
+        padding-top: 4rem;
+    }
+    .heading_text{
+        font-size: 4.7rem;
+        margin-bottom: 3.5rem;
+    }
+    .btn_emoji{
+        font-size: 4.8rem;
+        padding: 2rem;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        cursor: pointer;
+    }
+    .btn_container{
+        gap: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    .display_result{
+        font-size: 4rem;
+        margin: 1.7rem 0rem;
+    }
+    .show_my_move{
+        font-size: 5rem;
+    }
+    .show_comp_move{
+        font-size: 5rem;
+    }
+    .p_flex{
+        margin: 0.5rem 0rem;
+        font-size: 1.2rem;
+    }
+    .final_result{
+        gap: 3rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 3rem 0rem;
+    }
+    .reset_btn{
+        padding: 1rem 2rem;
+        border-radius: 7px;
+        border: 2px solid #fff;
+        font-weight: 700;
+        font-size: 1.2rem;
     }
 }
