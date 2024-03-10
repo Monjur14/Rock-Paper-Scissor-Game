@@ -73,8 +73,68 @@ let computerMove = '';
                 score.Tie += 1
             }
             localStorage.setItem("score", JSON.stringify(score))
-           updateScoreElement();
+            updateScoreElement();
            document.querySelector('.display_result').innerText = result
+           let popupContainer = document.querySelector(".popup_container")
+        if(score.Win === 15){
+            popupContainer.classList.remove("none")
+            popupContainer.classList.add("block")
+            popupContainer.innerHTML = ''
+            popupContainer.insertAdjacentHTML("beforeend", `
+            <div class="popup">
+            <img src="images/win.png" alt="">
+            <h1>Congratulations🎉</h1>
+            <button id="play_again" onclick="
+            score.Win = 0;
+            score.Lose = 0;
+            score.Tie = 0;
+            updateScoreElement();
+            showResult()
+            ">Play Again</button>
+            </div>
+            `)
+        }else if(score.Lose === 15){
+            popupContainer.classList.remove("none")
+            popupContainer.classList.add("block")
+            popupContainer.innerHTML = ''
+            popupContainer.insertAdjacentHTML("beforeend", `
+            <div class="popup">
+            <img src="images/lose.png" alt="">
+            <h1>Better Luck Next Time</h1>
+            <button id="play_again" onclick="
+            score.Win = 0;
+            score.Lose = 0;
+            score.Tie = 0;
+            updateScoreElement();
+            showResult()
+            ">Play Again</button>
+            </div>
+            `)
+        } else if(score.Tie === 15){
+            popupContainer.classList.remove("none")
+            popupContainer.classList.add("block")
+            popupContainer.innerHTML = ''
+            popupContainer.insertAdjacentHTML("beforeend", `
+            <div class="popup">
+            <img src="images/tie.png" alt="">
+            <h1>It's Tie🤧</h1>
+            <button id="play_again" onclick="
+            score.Win = 0;
+            score.Lose = 0;
+            score.Tie = 0;
+            updateScoreElement();
+            showResult()
+            ">Play Again</button>
+            </div>
+            `)
+        }
+        document.getElementById("play_again").addEventListener("click", function(){
+            score.Win = 0;
+            score.Lose = 0;
+            score.Tie = 0;
+            popupContainer.classList.remove("block")
+            popupContainer.classList.add("none")
+        })
         }
         function updateScoreElement(){
             document.querySelector('.win_score').innerText = `Win: ${score.Win}`
@@ -88,5 +148,6 @@ let computerMove = '';
                 document.querySelector('.show_comp_move').innerText = "❌"
             }
         }
-
+        
+        
         
